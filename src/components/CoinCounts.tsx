@@ -10,8 +10,8 @@ function CoinCounts(props: CoinCountsProps) {
     
     return (
         <div>
-            <p>Heads: {countHeads}</p>
-            <p>Tails: {countTails}</p>
+            <p className='coin-counts'>Heads: {countHeads}</p>
+            <p className='coin-counts'>Tails: {countTails}</p>
         </div>
     );
     

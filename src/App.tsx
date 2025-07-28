@@ -59,8 +59,7 @@ function App() {
                 <div className="coin-display-container"> 
                     <img src={image} alt={lastResult} /> 
                     <div>
-                        <p className="counts-text">Heads: {countHeads}</p>
-                        <p className="counts-text">Tails: {countTails}</p> 
+                        <CoinCounts countHeads={countHeads} countTails={countTails} />
                     </div>
                 </div>
                 

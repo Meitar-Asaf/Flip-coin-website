@@ -37,7 +37,7 @@ function App() {
         if (isFliping) { return; }
         setFlipping(true);
         setImage(image === headsImage ? headsImage : tailsImage);
-        const animationIntervalId = setInterval(() => { setImage(image => image === headsImage ? tailsImage : headsImage);}, 100)
+        const animationIntervalId = setInterval(() => { setImage(image => image === headsImage ? tailsImage : headsImage);}, 300)
         setTimeout(() => {
             clearInterval(animationIntervalId);
             const random = Math.random();

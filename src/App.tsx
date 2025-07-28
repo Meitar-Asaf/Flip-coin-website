@@ -47,7 +47,7 @@ function App() {
             setFlipping(false);
             newImage === headsImage ? setHeadsCount(countHeads + 1) : setTailsCount(countTails + 1);
             setImage(newImage);
-        }, 3000);
+        }, 10000);
     }
         ;
     return (

@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Coin Flipper Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project features a simple React application that simulates a coin flip, displays the result (Heads/Tails), and keeps track of the counts for each side.
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+The application allows users to flip a coin with a click of a button. During the flip, a visual animation of the coin spinning is displayed. After a short delay, the final result (Heads or Tails) is revealed, and the respective counters are updated.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* **Dynamic Coin Flip:** Click the "Flip the coin" button to initiate a flip.
+* **Visual Animation:** The coin animates by rapidly switching between Heads and Tails images during the flip duration.
+* **Final Result Display:** Shows the outcome of the last flip (Heads or Tails).
+* **Flip Counters:** Keeps a running tally of the total Heads and Tails.
+* **Flipping State Management:** The button is disabled while the coin is flipping to prevent multiple simultaneous flips.
+* **Basic and Clear User Interface.**
+* **Responsive Design:** Adapts to different screen sizes (mobile friendly).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+* [cite_start][React](https://react.dev/) - A JavaScript library for building user interfaces.
+* [cite_start][TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+* CSS - For styling and visual presentation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started (Local Development)
 
-### `npm run build`
+To run this project on your local machine, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Ensure Node.js and npm are installed:**
+    If you don't have them, download and install from the official [Node.js website](https://nodejs.org/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+    ```
+    (Make sure to replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with your actual GitHub username and repository name).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Navigate to the project directory:**
+    ```bash
+    cd YOUR_REPO_NAME
+    ```
 
-### `npm run eject`
+4.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5.  **Start the development server:**
+    ```bash
+    npm start
+    ```
+    The application will open in your browser at `http://localhost:3000`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Status
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* **Version:** 1.0.0
+* **Status:** Core coin flipping functionality with animation and counting is complete.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Meitar asaf]

@@ -1,38 +1,143 @@
 .App {
   text-align: center;
+  background-color: white;
 }
 
-.App-logo {
+html, body, #root, .App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px; /* מרווח עליון */
+  box-sizing: border-box; /* שינוי: חשוב לטעימת מידות */
+}
+
+
+.App-logo { /* נשאר כפי ששלחת, אם רלוונטי */
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-header { /* נשאר כפי ששלחת, אך הוספתי לו את ה-display: flex כדי למרכז */
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
+.App-link { /* נשאר כפי ששלחת */
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes App-logo-spin { /* נשאר כפי ששלחת */
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* קלאסים חדשים / שינויים עבור פרויקט הטלת המטבע והרספונסיביות */
+/* ---------------------------------------------------------------------- */
+
+/* קלאס חדש עבור הקונטיינר של המטבע והקאונטרים */
+.coin-display-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* שינוי: מאפשר לילדים לרדת לשורה חדשה במובייל */
+  width: 100%; /* שינוי: תופס 100% רוחב כדי להשתמש בו ב-media queries */
+  max-width: 400px; /* שינוי: מגביל רוחב מקסימלי במסכים גדולים */
+}
+
+/* סגנונות עבור תמונת המטבע בתוך הקונטיינר */
+.coin-display-container img {
+  width: 150px; /* מידה קבועה בדסקטופ */
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* סגנונות עבור טקסט התוצאה האחרונה */
+.last-result-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* סגנונות עבור טקסט המונים */
+.counts-text {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* סגנונות עבור הכפתור */
+.flip-button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 180px; /* שינוי: רוחב קבוע לכפתור */
+}
+
+.flip-button:hover {
+  background-color: #45a049;
+}
+
+.flip-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------------------- */
+/* שאילתות מדיה (Media Queries) - התאמה למסכי מובייל קטנים */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 600px) { /* כשרוחב המסך קטן או שווה ל-600 פיקסלים */
+  .App-header {
+    font-size: calc(8px + 2vmin); /* הקטנת גודל פונט כללי במובייל */
+  }
+
+  .coin-display-container {
+    flex-direction: column; /* שינוי: במובייל, אלמנטים יהיו אחד מתחת לשני (טור) */
+    align-items: center; /* יישור אופקי למרכז בטור */
+    padding: 10px; /* ריפוד קטן יותר */
+    max-width: 90%; /* שינוי: תופס 90% מהרוחב הזמין */
+  }
+
+  .coin-display-container img {
+    width: 120px; /* שינוי: הקטנת המטבע במובייל */
+    height: 120px;
+    margin-right: 0; /* הסרת מרווח מימין (כי הם כבר לא זה ליד זה) */
+    margin-bottom: 15px; /* מרווח מתחת למטבע */
+  }
+
+  /* אם המונים בתוך div נפרד, נמרכז אותו */
+  .coin-display-container > div {
+    display: flex;
+    flex-direction: column; /* וודא שהמונים גם מסודרים בטור */
+    align-items: center;
+    width: 100%; /* שינוי: תופס 100% מהרוחב של coin-display-container */
+  }
+
+  .last-result-text {
+    font-size: 1.2em; /* הקטנת פונט התוצאה במובייל */
+  }
+
+  .flip-button {
+    width: 150px; /* הקטנת רוחב הכפתור במובייל */
+    font-size: 1em;
   }
 }
